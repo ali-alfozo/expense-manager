@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدير المصروفات</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+<body><button id="theme-toggle" class="theme-toggle-fixed">🌙</button>
+    <div class="container">
+        <h1> مدير المصروفات💰</h1>
+
+        <div class="balance">   
+            <h3>الرصيد الحالي</h3>
+            <div class="amount" id="total-balance">0</div>
+        </div>
+
+        <div class="income-expense">
+            <div class="card income">
+                <strong>📥 إجمالي الدخل</strong>
+                <p id="total-income">0</p>
+            </div>
+            <div class="card expense">
+                <strong>📤 إجمالي المصروفات</strong>
+                <p id="total-expense">0</p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>📝 وصف العملية</label>
+            <input type="text" id="desc" placeholder="مثال: راتب، فاتورة نت...">
+        </div>
+        <div class="form-group">
+            <label>💵 المبلغ</label>
+            <input type="number" id="amount" placeholder="0">
+        </div>
+        <div class="form-group">
+            <label>🔄 النوع</label>
+            <select id="type">
+                <option value="income">دخل (+)</option>
+                <option value="expense">مصروف (-)</option>
+            </select>
+        </div>
+        <button id="add-btn">➕ إضافة معاملة</button>
+<button id="delete-all-btn" style="background: #e74c3c; margin-top: 10px;">🗑 حذف الكل</button>
+        <h2>📋 قائمة المعاملات</h2>
+        <p id="transaction-count" class="transaction-count" style="text-align: center; margin-top: 5px; font-weight: bold; font-size: 0.9rem;"></p>
+       
+         <div id="transactions-list" class="transaction-list"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
